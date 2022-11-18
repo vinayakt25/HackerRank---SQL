@@ -1,0 +1,3 @@
+select city,length(city) from station where id=(select min(id) from station where length(city)=(select min(length(city)) from station));
+
+select city,length(city) from station where id=(select max(id) from station where length(city)=(select max(length(city)) from station));
